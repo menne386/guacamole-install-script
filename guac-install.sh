@@ -15,6 +15,7 @@ if [ "$( find . -maxdepth 1 \( -name 'guacamole-*' -o -name 'mysql-connector-jav
     exit 1
 fi
 
+
 # Version number of Guacamole to install
 # Homepage ~ https://guacamole.apache.org/releases/
 GUACVERSION="1.2.0"
@@ -96,6 +97,7 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get -y install build-essential libcairo2-dev ${JPEGTURBO} ${LIBPNG} libossp-uuid-dev libavcodec-dev libavformat-dev libavutil-dev \
 libswscale-dev freerdp2-dev libpango1.0-dev libssh2-1-dev libtelnet-dev libvncserver-dev libpulse-dev libssl-dev \
 libvorbis-dev libwebp-dev libwebsockets-dev freerdp2-x11 libtool-bin ghostscript dpkg-dev wget crudini \
+nginx php7.3-fpm php7.3-curl php7.3-xml php7.3-zip php-redis redis-server \
 ${TOMCAT} &>> ${LOG}
 
 # If apt fails to run completely the rest of this isn't going to work...
